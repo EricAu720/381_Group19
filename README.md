@@ -19,20 +19,19 @@
 ## 3. The Cloud-Based Server URL (for Testing)
 - **Note**: As this is a local development setup, no cloud deployment is currently active. For testing purposes, use the local server URL:
   - `http://localhost:3000`
-- **Future Deployment**: Once deployed to a cloud platform (e.g., Render or Heroku), the URL will be updated, such as `https://comp3810sef-group19.render.com/`. Please check with the project team for the latest deployment status.
+- **Future Deployment**: Once deployed to a cloud platform, the URL will be `https://three81-group19.onrender.com`.
 
 ## 4. Operation Guides
 
 ### Use of Login/Logout Pages
 - **Valid Login Information**:
-  - Email: `admin@library.com`, Password: `adminpass`
-  - Email: `user@library.com`, Password: `userpass`
+  - Email: `123@test.com`, Password: `123`
+  - Email: `1234@test.com`, Password: `1234`
 - **Sign-in Steps**:
   1. Open a web browser and navigate to `http://localhost:3000/login`.
   2. Enter a valid email and password in the login form.
   3. Click the "Login" button to access the home page.
-  4. To log out, click the "Logout" link on any page to return to the login page.
-- **Note**: Login functionality is currently simplified and does not enforce authentication for RESTful APIs.
+  4. To log out, click the "Logout" link on any page to return to the login page..
 
 ### Use of Your CRUD Web Pages
 - **Home Page (`/home`)**:
@@ -63,6 +62,7 @@
   - **Prerequisites**: Ensure the server is running (`npm start`) at `http://localhost:3000`.
   - **Tools**: Use Postman, cURL, or a similar HTTP client.
 - **cURL Testing Commands**:
-  - **Read All Users**:
-    ```bash
-    curl http://localhost:3000/users
+- (Read)curl http://localhost:3000/users
+-   (Create)curl -X POST http://localhost:3000/users -d "username=testuser" -d "email=test@example.com" -d "password=testpass"
+- (Updated)curl -X PUT http://localhost:3000/users/<user_id> -d"email=newemail@example.com" 
+-(delete)curl -X DELETE http://localhost:3000/users/<user_id>
